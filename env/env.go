@@ -1,5 +1,5 @@
 // Package env centralizes the environment-variable helpers that every
-// rucoder Go service previously reimplemented locally.
+// zergx Go service previously reimplemented locally.
 package env
 
 import (
