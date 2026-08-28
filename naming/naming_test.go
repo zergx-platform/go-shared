@@ -3,13 +3,13 @@ package naming
 import "testing"
 
 func TestValidComponent(t *testing.T) {
-	valid := []string{"a", "acme", "my.repo", "v1.2", "feature-x", "A_b"}
+	valid := []string{"a", "acme", "my.repo", "v1.2", "feature-x", "A_b", "feature/a", "feat/a/b"}
 	for _, s := range valid {
 		if !ValidComponent(s) {
 			t.Errorf("ValidComponent(%q) = false, want true", s)
 		}
 	}
-	invalid := []string{"", ":x", "a:b", "a..b", "a.", "a.lock", ".start", "-start", "sp ace"}
+	invalid := []string{"", ":x", "a:b", "a..b", "a.", "a.lock", ".start", "-start", "sp ace", "/a", "a/", "a//b"}
 	for _, s := range invalid {
 		if ValidComponent(s) {
 			t.Errorf("ValidComponent(%q) = true, want false", s)
