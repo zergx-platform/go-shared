@@ -1,5 +1,5 @@
 // Package httpx is the shared JSON-over-HTTP client used by services that
-// talk to internal APIs (jj-server, agent, …). It centralizes the contract
+// talk to internal APIs (jjlab, agent, …). It centralizes the contract
 // every caller must rely on:
 //
 //   - one shared client with a bounded timeout (a hung upstream can never
